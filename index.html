@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <nav class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#hero">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#hero">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div style="height: 80px;"></div>
+
+
+    <section id="hero" class="hero">
+        <img src="https://via.placeholder.com/150" alt="" />
+        <h1>Bhimappa Kattennavar</h1>
+        <p>AI & IoT Developer</p>
+        <div class="buttons">
+            <a href="#projects">View Projects</a>
+            <button onclick="openModal()">Download Resume</button>
+        </div>
+    </section>
+
+
+    <section id="About Section">
+        <h2>About</h2>
+        <p> coming soon...</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Project details...</p>
+    </section>
+
+    <section id="Skills">
+        <h2>Skills</h2>
+        <p>Key skills are highlighted below</p>
+    </section>
+
+    <section id="Contact">
+        <h2>Contact</h2>
+        <p>Email:portfolio@gmail.com</p>
+    </section>
+
+    <div id="resumeModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <h2>Resume</h2>
+            <p>You can download the resume or get an AI-generated summary.</p>
+            <a href="resume.pdf" download class="btn">Download Resume</a>
+            <button class="btn dark" onclick="getAISummary()">Get AI Summary</button>
+            <div id="aiSummaryText" class="summary-text"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>© 2025 Bhimappa Kattennavar. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        function openModal() {
+            document.getElementById("resumeModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("resumeModal").style.display = "none";
+            document.getElementById("aiSummaryText").innerHTML = "";
+        }
+
+        function getAISummary() {
+
+            document.getElementById("aiSummaryText").innerHTML = "<p><strong>AI Summary:</strong> Bhimappa is an AI and IoT enthusiast with strong experience in Python, web technologies, and practical project building.</p>";
+        }
+    </script>
+
+</body>
+
+</html>
